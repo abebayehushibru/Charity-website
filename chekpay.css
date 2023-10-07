@@ -1,0 +1,125 @@
+.secp {
+height:65vh;
+position:relative;
+width:100%;
+overflow:scroll;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+.check > h2 {
+padding:5px;
+color:#ff570a;
+border:1px solid #ff570a ;
+border-radius:2px;
+}
+button {
+background-color:red;
+border-top-right-radius:4px;
+border-bottom-right-radius:4px;
+color:white;
+border:none;
+}
+input {
+height:30px;
+border:1px solid red;
+padding-left:10px;
+border-top-left-radius:4px;
+border-bottom-left-radius:4px;
+}
+.atekalay {
+position:absolute;
+height:80%;
+width:100%;
+
+}
+.myin {
+position:relative;
+right:10%;
+margin-bottom:30px;
+width:auto;
+display:flex;
+float:right;
+}
+.head {
+position:relative;
+opacity:0;
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+.head >div {
+position:relative;
+display:flex;
+width:90%;
+}
+.head > div > span{
+border-collapse:collapse;
+border:1px solid;
+font-weight:bold;
+text-align:center;
+}
+.mytbdiv {
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+.mytbdiv >table  {
+border-collapse: collapse;
+border:1px solid;
+left:10%;
+width:90%;
+}
+tr{
+border-collapse:collapse;
+border:1px solid;
+}
+td{
+border:1px solid;
+text-align:center;
+}
+.x {
+border:none;
+color:red;
+font-size:20px;
+font-weight:bold;
+}
+.tqu {
+text-align:center;}
+
+.paid{
+color:green;
+font-size:bold;
+font-size:20px;
+border:none;
+}
+ .red {
+ text-align:center;
+ color:red;
+ font-style:italic;
+ border:1px solid red;
+ padding:10px;font-size:bold;
+ font-size:20px;
+ }
+ .green{
+ text-align:center;
+ color:green;
+ font-style:italic;
+ border:1px solid ;
+ padding:10px;
+ font-size:bold;
+ font-size:20px;
+ }
+ .orange{
+ text-align:center;
+ color:orange;
+ font-style:italic;
+ border:1px solid;
+ padding:10px;
+ font-size:bold;
+ font-size:20px;
+ }
+ h3 {
+ text-align:center;}

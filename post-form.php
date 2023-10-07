@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title></title>
+<style type="text/css">
+.post_sect {
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+.reg_form {
+width:60%;
+height:auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+.reg_form >h2{
+font-weight:bold;
+font-size:30px;
+}
+.reg_form >div{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+.reg_form >div >.textarea {
+height:300px;
+width:100%;
+border:1px solid;
+text-indent:40px;
+padding-top:20px;
+border-radius:10px;
+margin-bottom:30px;
+font-size:18px;
+
+}
+.reg_form >div >div{
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.img_def {
+height:100px;
+width:100px;
+margin-right:20px;
+border-radius:10px;
+}
+.reg_form>input {
+width:100px;
+height:40px;
+background-color:blue;
+font-size:20px;
+font-weight:bold;
+color:white;
+border-radius:6px;
+border:none;
+}
+</style>
+</head>
+<body>
+
+<section class="post_sect" >
+<?php
+if ($_SERVER['REQUEST_METHOD']=='POST'){
+require("post.php");
+}
+?>
+	<form class="reg_form" action="post-form.php" method="post"  id="reg_form" enctype="multipart/form-data">
+		<h2> Your post </h2>
+			<p class="p" >hhe</p>
+	<div>
+	
+		<textarea class="textarea"  name="comments"   placeholder="your text here......" >
+		</textarea>
+		<div>
+			<img src="abclogo.png" class="img_def"  >
+			<input class="inputfile" type="file" name="uploadphoto" onchange="reaurl(this);">
+		</div>
+	</div>
+	<input type="submit" value="post" >
+	</form>
+	<p class="p" ></p>
+</section>
+<script type="text/javascript">
+var inputimg= document.querySelector(".img_def");
+var inputfile= document.querySelector(".inputfile");
+var p = document.querySelector(".p");
+inputfile.onchange=function(e){
+p.textContent="hello";
+readurl(this);
+}
+function readurl(input)
+{
+if(input.files && input.files[0])
+{
+let reader =new FileReader();
+reader.onload =function(e){
+inputimg.setAttribute('src',e.target.result);
+}
+reader.readAsDataURL(input.files[0]);
+p.textContent=inputimg.getAttribute("src");
+}
+}
+</script>
+</body>
+</html>
